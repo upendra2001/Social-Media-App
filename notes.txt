@@ -1,0 +1,10 @@
+backend basics : https://zellwk.com/blog/crud-express-mongodb/
+
+API : https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/
+
+Get Started with Atlas : https://docs.atlas.mongodb.com/getting-started/
+
+sessions and authentication : https://www.youtube.com/watch?v=TDe7DRYK8vU;
+
+main logic : https://gabrieleromanato.name/nodejs-create-a-simple-social-network-with-expressjs
+
