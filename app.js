@@ -15,7 +15,7 @@ const io = new Server(server);
 
 dotenv.config({ path: './config.env' });
 const url = process.env.URL;
-const port = process.env.PORT;
+const port = process.env.PORT||8000;
 const oneDay = 1000 * 60 * 60 * 24;
 const store = new mongodbSession({
     uri: url,
