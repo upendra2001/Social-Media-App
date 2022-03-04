@@ -44,7 +44,6 @@ mongoose.connect(url, function (err, client) {
 
     server.listen(port, function (error) {
         if (error) {
-
             console.log('error in running the server', error);
             return;
         }
