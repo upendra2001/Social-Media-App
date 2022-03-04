@@ -63,7 +63,8 @@ module.exports.profile = (req, res) => {
             }
         })
         .catch(err=> {
-            res.redirect('back');
+            res.json(err);
+            
         });
 };
 
