@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+// var router=require('express-promise-router')();
 
 var followController = require('./controllers/followController');
 var postController = require('./controllers/postController');

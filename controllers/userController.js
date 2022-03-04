@@ -10,7 +10,8 @@ module.exports.search_profile = (req, res) => {
 
         })
         .catch(err => {
-            res.json(err);
+            res.redirect('back');
+            // res.json(err);
         });
 };
 
@@ -39,16 +40,17 @@ module.exports.home_guest = (req, res) => {
 module.exports.profile = (req, res) => {
     user_doc.findOne({ username: req.params.username })
         .then(result => {
-            if (result == null) {
-                res.redirect('back');
+            // console.log(result);
+            if (result==null) {
+              res.redirect('back');
             }
-            if (result.username == req.session.user.username) {
+            else if (result.username == req.session.user.username) {
                 res.render('profile', { other: result, myself: req.session.user.username, who: '0' });  // not showing any button
             }
             else {
                 user_doc.findOne({ username: req.params.username, "followers.follower_name": req.session.user.username })
                     .then(result2 => {
-                        if (result2 == null) {
+                        if (!result2) {
                             res.render('profile', { other: result, myself: req.session.user.username, who: '1' });  //showing follow button
                         }
                         else {
@@ -60,8 +62,8 @@ module.exports.profile = (req, res) => {
                     });
             }
         })
-        .catch(err => {
-            res.json(err);
+        .catch(err=> {
+            res.redirect('back');
         });
 };
 
