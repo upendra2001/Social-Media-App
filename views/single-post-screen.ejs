@@ -45,17 +45,17 @@
             <h2>
                 <%=post_sent.title%>
             </h2>
-
-            <span class="pt-2">
-                <a href="/post/<%=post_sent._id%>/edit" class="text-primary mr-2" data-toggle="tooltip"
-                    data-placement="top" title="Edit"><i class="fas fa-edit"></i></a>
-                <form class="delete-post-form d-inline" action="/post/<%=post_sent._id%>/delete" method="POST">
-                    <!-- <input type="hidden" name="_csrf" value="FbfY4oWi-5kP6LnqTZXMnuFP9T-HWA2Xi4KI"> -->
-                    <button class="delete-post-button text-danger" data-toggle="tooltip" data-placement="top"
-                        title="Delete"><i class="fas fa-trash"></i></button>
-                </form>
-            </span>
-
+            <%if(post_sent.username==myself){%>
+                <span class="pt-2">
+                    <a href="/post/<%=post_sent._id%>/edit" class="text-primary mr-2" data-toggle="tooltip"
+                        data-placement="top" title="Edit"><i class="fas fa-edit"></i></a>
+                    <form class="delete-post-form d-inline" action="/post/<%=post_sent._id%>/delete" method="POST">
+                        <!-- <input type="hidden" name="_csrf" value="FbfY4oWi-5kP6LnqTZXMnuFP9T-HWA2Xi4KI"> -->
+                        <button class="delete-post-button text-danger" data-toggle="tooltip" data-placement="top"
+                            title="Delete"><i class="fas fa-trash"></i></button>
+                    </form>
+                </span>
+                <%}%>
         </div>
 
         <p class="text-muted small mb-4">
