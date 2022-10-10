@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
   },
-  "author": "Yuvraj Sharma",
+  "author": "Upendra Singh Chauhan",
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.17.5",
