@@ -3,13 +3,9 @@
   "version": "1.0.0",
   "description": "Social Media app",
   "main": "app.js",
-  "type":"module",
-  "engines": {
-    "node": "14.x"
-  },
   "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "author": "Upendra Singh Chauhan",
   "license": "ISC",
