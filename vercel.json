@@ -2,11 +2,6 @@
     "version": 2,
     "builds": [
         {
-            "env": {
-                "URL": "mongodb+srv://randomperson:random%40123@cluster0.den1a.mongodb.net/storage?retryWrites=true&w=majority"
-            }
-        },
-        {
             "src": "./app.js",
             "use": "@vercel/node"
         }
